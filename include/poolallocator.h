@@ -1,7 +1,7 @@
 #pragma once
 
 template <typename T, size_t POOL_SIZE>
-struct PoolAllocator
+class PoolAllocator
 {
 public:    
     PoolAllocator() : 
