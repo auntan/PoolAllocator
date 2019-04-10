@@ -13,9 +13,16 @@ struct Test
 
 int main()
 {
+    // Declare objects type, and pool size
     PoolAllocator<Test, 10> pool;
+    
+    // Allocate memory from pool and 
+    // forward arguments to Test constructor
     Test *test = pool.alloc(42);
+    
+    // Free memory and call destructor
     pool.free(test);
+    
     return 0;
 }
 ```
