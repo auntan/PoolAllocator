@@ -46,7 +46,7 @@ private:
 
     private:
         Item *_next;
-        alignas(alignof(char[sizeof(T)])) char _data[sizeof(T)];
+        alignas(alignof(T)) char _data[sizeof(T)];
     };
 
 private:
